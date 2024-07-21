@@ -1,12 +1,13 @@
 $firstColor: red;
 $secondColor: blue;
 $thirdColor: green;
+$fontColor: gray;
 
 .container-1 {
     [class^=box] {
         width: 80px;
         height: 80px;
-        color: white;
+        color: $fontColor;
         display: inline-flex;
         background-color: $firstColor;
         justify-content: center;
@@ -16,11 +17,13 @@ $thirdColor: green;
     @for $i from 1 through 4 {
         .box-darken-#{$i} {
             background-color: darken($firstColor, $i * 5%);
+            color: lighten($color: $fontColor, $amount: $i * 10%)
         }
     }
     @for $i from 1 through 4 {
         .box-lighten-#{$i} {
             background-color: lighten($firstColor, $i * 5%);
+            color: darken($color: $fontColor, $amount: $i * 10%)
         }
     }
 }
@@ -38,11 +41,13 @@ $thirdColor: green;
     @for $i from 1 through 4 {
         .box-darken-#{$i} {
             background-color: darken($secondColor, $i * 5%);
+            color: lighten($color: $fontColor, $amount: $i * 10%)
         }
     }
     @for $i from 1 through 4 {
         .box-lighten-#{$i} {
             background-color: lighten($secondColor, $i * 5%);
+            color: darken($color: $fontColor, $amount: $i * 10%)
         }
     }
 }
@@ -60,11 +65,13 @@ $thirdColor: green;
     @for $i from 1 through 4 {
         .box-darken-#{$i} {
             background-color: darken($thirdColor, $i * 5%);
+            color: lighten($color: $fontColor, $amount: $i * 10%)
         }
     }
     @for $i from 1 through 4 {
         .box-lighten-#{$i} {
             background-color: lighten($thirdColor, $i * 5%);
+            color: darken($color: $fontColor, $amount: $i * 10%)
         }
     }
 }
