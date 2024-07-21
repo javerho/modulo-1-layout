@@ -1,0 +1,70 @@
+@use "theme1" as *;
+//@use "theme2" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 100px;
+}
+
+div[class^="squared"] p {
+    color: $colorText;
+    padding: 15px;
+}
+
+div[class^="squared"] {
+    border-radius: $borderRadius;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+div[class^="notSquared"] p {
+    color: $colorText;
+
+}
+
+div[class^="notSquared"] {
+    border-radius: 0;
+    box-shadow: none;
+    margin: 30px 0;
+}
+
+@for $i from 1 through 4 {
+    @if $i ==1 {
+        .squared-#{$i} {
+            background-color: $colorBase;
+        }
+    }
+
+    @if $i ==2 {
+        .squared-#{$i} {
+            background-color: $colorImportant;
+        }
+    }
+
+    @if $i ==3 {
+        .squared-#{$i} {
+            background-color: $colorWarning;
+        }
+    }
+
+    @if $i ==4 {
+        .squared-#{$i} {
+            box-shadow: $boxShadow;
+        }
+
+    }
+}
+
+p{
+    .notSquared-1 &{
+        font-family: $primaryFont;
+    }
+    .notSquared-2 &{
+        font-family: $secondaryFont;
+    }
+}
