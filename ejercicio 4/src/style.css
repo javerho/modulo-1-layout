@@ -1,0 +1,61 @@
+html{
+    --paddinRegular: 1rem;
+    --marginRegular: 1rem;
+    --green:rgb(103, 151, 59);
+    
+}
+
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(234, 234, 234);
+    padding: 20px;
+}
+
+.card{
+    background-color: white;
+    border: 1px solid;
+    border-color: rgb(131, 131, 131);
+    width: 300px;
+    overflow: hidden;
+    display: inline-grid;
+    grid-auto-rows: auto;
+}
+
+.image{
+    width: 100%;
+}
+
+.title{
+    padding: var(--paddinRegular) 0 0 var(--paddinRegular);
+    font-weight: 400;
+}
+
+.text{
+    padding: var(--paddinRegular);
+}
+
+.date{
+    color: var(--green);
+    text-align: right;
+    padding-right: var(--paddinRegular);
+}
+
+.dataBold{
+    font-weight: bold;
+    color: black;
+}
+
+.infoButton{
+    margin: var(--marginRegular);
+    padding: 0.75rem;
+    color: white;
+    border: none;
+    font-size: 16px;
+    background-color: var(--green);
+}
